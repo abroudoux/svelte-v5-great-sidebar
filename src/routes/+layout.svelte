@@ -3,7 +3,7 @@
 
     import "../app.css";
     import * as Sidebar from "$lib/components/ui/sidebar/index";
-    import AppSidebar from "$lib/components/AppSidebar.svelte";
+    import AppSidebar from "$lib/components/app-sidebar.svelte";
 
     let { children } = $props();
 </script>

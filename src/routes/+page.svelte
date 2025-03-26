@@ -1,5 +1,5 @@
 <script lang="ts">
-    import ModeToggle from "$lib/components/ModeToggle.svelte";
+    import ModeToggle from "$lib/components/mode-toggle.svelte";
 </script>
 
 <div class="flex gap-3 flex-col">
