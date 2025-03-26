@@ -14,7 +14,6 @@
 <Sidebar.Provider>
     <AppSidebar />
     <Sidebar.Inset>
-        <!-- <Sidebar.Trigger class="m-2" /> -->
         <header
             class="bg-background sticky top-0 flex h-16 shrink-0 items-center justify-between gap-2 border-b px-4 rounded-t-xl flex-row"
         >
