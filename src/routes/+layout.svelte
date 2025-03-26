@@ -15,11 +15,11 @@
     <AppSidebar />
     <Sidebar.Inset>
         <header
-            class="bg-background sticky top-0 flex h-16 shrink-0 items-center justify-between gap-2 border-b px-4 rounded-t-xl flex-row"
+            class="bg-background sticky top-0 flex h-16 shrink-0 items-center justify-between border-b px-4 rounded-t-xl flex-row"
         >
             <div class="flex flex-row items-center gap-1">
                 <Sidebar.Trigger class="-ml-1" />
-                <Separator orientation="vertical" class="mr-2 h-4" />
+                <Separator orientation="vertical" class="mr-2 h-6" />
                 <Breadcrumb.Root>
                     <Breadcrumb.List>
                         <Breadcrumb.Item>

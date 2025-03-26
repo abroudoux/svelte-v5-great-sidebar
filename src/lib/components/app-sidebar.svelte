@@ -1,46 +1,54 @@
 <script lang="ts">
+    import type { Icon as IconType } from "@lucide/svelte";
     import PackageOpen from "@lucide/svelte/icons/package-open";
     import House from "@lucide/svelte/icons/house";
     import Palette from "@lucide/svelte/icons/palette";
     import Tags from "@lucide/svelte/icons/tags";
     import Unplug from "@lucide/svelte/icons/unplug";
-    import * as Sidebar from "$lib/components/ui/sidebar/index.js";
-    import Cloudy from "@lucide/svelte/icons/cloudy";
-    import * as Avatar from "$lib/components/ui/avatar/index";
-    import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index";
     import BadgeCheck from "@lucide/svelte/icons/badge-check";
     import Bell from "@lucide/svelte/icons/bell";
     import ChevronsUpDown from "@lucide/svelte/icons/chevrons-up-down";
     import CreditCard from "@lucide/svelte/icons/credit-card";
     import LogOut from "@lucide/svelte/icons/log-out";
     import Sparkles from "@lucide/svelte/icons/sparkles";
+    import Cloudy from "@lucide/svelte/icons/cloudy";
+
+    import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+    import * as Avatar from "$lib/components/ui/avatar/index";
+    import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index";
+
     import { useSidebar } from "$lib/components/ui/sidebar/index";
 
-    // Menu items.
-    const items = [
+    interface SidebarItem {
+        title: string;
+        url: string;
+        icon: typeof IconType;
+    }
+
+    const items: SidebarItem[] = [
         {
             title: "Home",
-            url: "#",
+            url: "/",
             icon: House,
         },
         {
             title: "Design",
-            url: "#",
+            url: "/design",
             icon: Palette,
         },
         {
             title: "Describe",
-            url: "#",
+            url: "/describe",
             icon: Tags,
         },
         {
             title: "Package",
-            url: "#",
+            url: "/package",
             icon: PackageOpen,
         },
         {
             title: "Connect",
-            url: "#",
+            url: "/connect",
             icon: Unplug,
         },
     ];
