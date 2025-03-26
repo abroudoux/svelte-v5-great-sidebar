@@ -1,10 +1,13 @@
 <script lang="ts">
-    import Calendar from "@lucide/svelte/icons/calendar";
+    import PackageOpen from "@lucide/svelte/icons/package-open";
     import House from "@lucide/svelte/icons/house";
-    import Inbox from "@lucide/svelte/icons/inbox";
-    import Search from "@lucide/svelte/icons/search";
-    import Settings from "@lucide/svelte/icons/settings";
+    import Palette from "@lucide/svelte/icons/palette";
+    import Tags from "@lucide/svelte/icons/tags";
+    import Unplug from "@lucide/svelte/icons/unplug";
     import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+    import Cloudy from "@lucide/svelte/icons/cloudy";
+    import NavUser from "./NavUser.svelte";
+    import ModeToggle from "./ModeToggle.svelte";
 
     // Menu items.
     const items = [
@@ -14,29 +17,58 @@
             icon: House,
         },
         {
-            title: "Inbox",
+            title: "Design",
             url: "#",
-            icon: Inbox,
+            icon: Palette,
         },
         {
-            title: "Calendar",
+            title: "Describe",
             url: "#",
-            icon: Calendar,
+            icon: Tags,
         },
         {
-            title: "Search",
+            title: "Package",
             url: "#",
-            icon: Search,
+            icon: PackageOpen,
         },
         {
-            title: "Settings",
+            title: "Connect",
             url: "#",
-            icon: Settings,
+            icon: Unplug,
         },
     ];
+
+    const user = {
+        name: "abroudoux",
+        email: "arthur.broudoux@example.com",
+        avatar: "https://avatars.githubusercontent.com/u/115638259?v=4",
+    };
 </script>
 
 <Sidebar.Root variant="inset" collapsible="icon">
+    <Sidebar.Header>
+        <Sidebar.Menu>
+            <Sidebar.MenuItem>
+                <Sidebar.MenuButton size="lg">
+                    {#snippet child({ props })}
+                        <a href="##" {...props}>
+                            <div
+                                class="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg"
+                            >
+                                <Cloudy class="size-4" />
+                            </div>
+                            <div class="flex flex-col gap-0.5 leading-none">
+                                <span class="font-semibold"
+                                    >Microcks Studio</span
+                                >
+                                <span class="">v1.0.0</span>
+                            </div>
+                        </a>
+                    {/snippet}
+                </Sidebar.MenuButton>
+            </Sidebar.MenuItem>
+        </Sidebar.Menu>
+    </Sidebar.Header>
     <Sidebar.Content>
         <Sidebar.Group>
             <Sidebar.GroupLabel>Application</Sidebar.GroupLabel>
@@ -58,4 +90,7 @@
             </Sidebar.GroupContent>
         </Sidebar.Group>
     </Sidebar.Content>
+    <Sidebar.Footer>
+        <NavUser {user} />
+    </Sidebar.Footer>
 </Sidebar.Root>

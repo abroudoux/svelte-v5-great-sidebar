@@ -2,4 +2,7 @@
     import ModeToggle from "$lib/components/ModeToggle.svelte";
 </script>
 
-<ModeToggle />
+<div class="flex gap-3 flex-col">
+    <h1>hello world</h1>
+    <ModeToggle />
+</div>
