@@ -11,8 +11,8 @@
 <Sidebar.Provider>
     <AppSidebar />
     <Sidebar.Inset>
+        <!-- <Sidebar.Trigger class="m-2" /> -->
         <main class="p-4">
-            <!-- <Sidebar.Trigger /> -->
             {@render children?.()}
         </main>
     </Sidebar.Inset>
